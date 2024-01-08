@@ -1,0 +1,10 @@
+# Python-specific
+__pycache__/
+*.pyc
+.pytest_cache
+
+# Virtual Environment
+env/
+venv/
+.Python
+

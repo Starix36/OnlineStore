@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./revenue_analyser.py:/app/revenue_analyser.py
+      - ./orders.csv:/app/orders.csv
+
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    volumes:
+      - ./revenue_analyser.py:/app/revenue_analyser.py
+      - ./test_revenue_analyser.py:/app/test_revenue_analyser.py
+      - ./orders.csv:/app/orders.csv

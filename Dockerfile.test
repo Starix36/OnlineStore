@@ -1,0 +1,11 @@
+FROM python:3.8-slim
+
+WORKDIR /app
+
+# Copy the application code and test files into the container
+COPY . .
+
+RUN pip install pandas pytest
+
+# Command to run the tests using pytest
+CMD ["pytest"]
